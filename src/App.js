@@ -40,7 +40,7 @@ export default function App(){
         <div className="left-column">
           <section className="card total-expense-card">
            <p className="card-title">Total Expenses</p>
-           <p className="card-amount">${total}</p>
+           <p className="card-amount">₹{total}</p>
           </section>
           <TransactionForm 
             addTransaction={addTransaction} 
