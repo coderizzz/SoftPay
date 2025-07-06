@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  padding-top: 16px;
 }
 
 .App-logo {
@@ -35,4 +39,361 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141013;
+  padding: 16px 24px;
+  border-radius: 12px;
+  position: relative;
+  border: 1px solid rgba(245, 224, 232, 0.1);
+  box-shadow: 
+  0 0 4px rgba(245, 224, 232, 0.08),
+  0 0 12px rgba(245, 224, 232, 0.12);
+}
+
+.heading {
+  font-size: large;
+  color: #f5e0e8;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: #1e1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 8px 16px;
+  color: #f5e0e8;
+  font-size: 14px;
+  transition: background 0.2s ease;
+  border-radius: 6px;
+  display: flex;
+}
+
+.dropdown li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.logout-img{
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+.avatar-label {
+  font-size: 12px;
+  color: #f5e0e8;
+  margin-top: 4px;
+}
+.dashboard {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0%;
+}
+.total-expense-card {
+  background-color: #1e1b1f;
+  padding: 14px;
+  padding-top:0%;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f5e0e8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: content-box;
+  width:60%;
+  font-family: 'Inter', sans-serif;
+}
+
+.card-title {
+  font-size: 25px;
+  color: #f5e0e8;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-amount {
+  font-size: 28px;
+  color: #eecde8;
+  font-weight: 500;
+}
+.transaction-form {
+  background-color: #1e1b1f;
+  padding: 14px;
+  padding-top: 3%;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f5e0e8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: content-box;
+  width:60%;
+  height: 20rem;
+  gap: 20px;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.transaction-form input {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #2a262b;
+  border: none;
+  color: #f5e0e8;
+  font-size: 14px;
+}
+
+.transaction-form input::placeholder {
+  color: #a58a9c;
+}
+
+.transaction-form button {
+  padding: 7px;
+  border-radius: 7px;
+  background-color: #df9ec4;
+  color: #141013;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 7px;
+}
+
+.transaction-form button:hover {
+  background-color: #eeb8d0;
+}
+.transaction-Head{
+  font-size: 25px;
+  display: flex;
+  font-weight: 400;
+}
+.transaction-list {
+  background-color: #1e1b1f;
+  padding: 14px;
+  padding-top: 3%;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f5e0e8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: content-box;
+  width:60%;
+  height: auto;
+  gap: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.transaction-list.empty {
+  background-color: #1e1b1f;
+  padding: 20px;
+  border-radius: 16px;
+  color: #a58a9c;
+  text-align: center;
+  font-size: 14px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 12px;
+}
+
+.txn-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.txn-desc {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f5e0e8;
+}
+
+.txn-date {
+  font-size: 12px;
+  color: #a58a9c;
+}
+
+.txn-right {
+  font-size: 16px;
+  font-weight: 600;
+  color: #df9ec4;
+}
+.txn-right {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.txn-amount{
+  margin-left: 10px;
+}
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ff9ea7;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #ff5c67;
+}
+.edit-btn {
+  background: transparent;
+  border: none;
+  color: #b9a2c6;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.edit-btn:hover {
+  color: #d3b5f5;
+}
+.bar-chart-container {
+  background-color: #1e1b1f;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.04);
+}
+.bar-header{
+  font-size: 25px;
+  color: #f5e0e8;
+  font-weight: 400;
+  display: flex;
+ /* align-items: center;
+  justify-content: center;*/
+  margin-bottom: 10px;
+}
+.bar-chart-card {
+  height: 300px;
+}
+
+.bar-chart-container {
+  height: 100%;
+}
+.form-input {
+  background-color: #1e1b1f;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  color: #f5e0e8;
+  margin-bottom: 12px;
+  width: 100%;
+  font-size: 14px;
+} 
+.pie-chart-container {
+  height: 300px;
+  width: 100%;
+}
+.summary-dashboard {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 24px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  flex: 1;
+  background-color: #1e1b1f;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f5e0e8;
+}
+.category-card 
+  /*
+  background-color: #1e1b1f;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  color: #f5e0e8;
+  width: 300px;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  not of any use spoiling my ui!
+  */
+
+.card-title {
+  font-size: 25px;
+  color: #f5e0e8;
+  font-weight: 400;
+  display: flex;
+  /*align-items: center;
+  justify-content: center;*/
+}
+.form-button{
+  width: 70px;
+  height: 40px;
 }
